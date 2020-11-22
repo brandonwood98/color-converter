@@ -1,0 +1,50 @@
+@import "src/variables";
+
+:host {
+  .input-group {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-size: 72px;
+      font-weight: 100;
+      margin-right: 1ch;
+
+      @media only screen and (max-width: 425px) {
+        font-size: 36px;
+      }
+    }
+
+    input {
+      border: none;
+      font-size: 72px;
+      font-weight: 500;
+      border-bottom: 2px solid var(--primary);
+      background: none;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1ch;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 1px),
+        0% calc(100% - 1px)
+      );
+      transition: clip-path 200ms linear;
+
+      &.error {
+        border-bottom: 2px solid $error;
+      }
+
+      &:focus {
+        outline: none;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        border-bottom: 2px solid var(--primary);
+      }
+
+      @media only screen and (max-width: 425px) {
+        font-size: 36px;
+      }
+    }
+  }
+}

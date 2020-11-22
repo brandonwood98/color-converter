@@ -1,0 +1,14 @@
+@import 'src/variables';
+
+:host {
+  .error-text {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -98.5px;
+    color: white;
+    background-color: $error;
+    padding: 8px;
+    border-radius: 4px;
+  }
+}

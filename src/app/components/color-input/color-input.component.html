@@ -1,0 +1,11 @@
+<div class="input-group">
+  <h1>#</h1>
+  <input
+    type="text"
+    maxlength="6"
+    size="13"
+    [formControl]="colorControl"
+    [class.error]="colorControl.hasError('pattern')"
+  />
+</div>
+
